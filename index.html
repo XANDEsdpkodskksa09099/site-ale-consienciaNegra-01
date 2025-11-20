@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consciência Negra</title>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .card {
+      position: relative;
+      display: inline-block;
+      border-radius: 20px;
+      transition: transform 0.4s ease;
+      margin-top: 20px;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      top: -25px;
+      left: -25px;
+      right: -25px;
+      bottom: -25px;
+      background: yellow;
+      border-radius: 40px;
+      filter: blur(45px);
+      opacity: 0.9;
+      z-index: -1;
+      transition: filter 0.4s, opacity 0.4s;
+    }
+
+    .card:hover {
+      transform: scale(1.08);
+    }
+
+    .card:hover::after {
+      filter: blur(60px);
+      opacity: 1;
+    }
+
+    .card img {
+      width: 350px;
+      border-radius: 20px;
+      display: block;
+    }
+
+    .hover-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) translateY(20px);
+      text-align: center;
+      color: rgb(0, 255, 81);
+      font-size: 22px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.5s, transform 0.5s;
+      padding: 0 10px;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+
+    .card:hover .hover-text {
+      opacity: 1;
+      transform: translate(-50%, -50%) translateY(0);
+    }
+
+    .desc {
+      margin-top: 30px;
+      max-width: 700px;
+      text-align: center;
+      line-height: 1.6;
+      font-size: 18px;
+      padding: 0 15px;
+    }
+
+    .icons {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 800px;
+      padding: 0 15px;
+    }
+
+    .icon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .icon-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #444;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .icon-item img:hover {
+      transform: scale(1.1);
+      border-color: yellow;
+    }
+
+    .icon-caption {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .icon-description {
+      margin-top: 10px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    @media (max-width: 768px) {
+      .icons {
+        grid-template-columns: 1fr;
+      }
+      
+      .card img {
+        width: 90vw;
+        max-width: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <img src="imagen.jpg" alt="Imagem representativa da Consciência Negra">
+    <div class="hover-text">
+      ANTI-RACISMO SEMPRE<br>
+      Dia da Consciência Negra
+    </div>
+  </div>
+
+  <div class="desc">
+    O Dia da Consciência Negra, celebrado em 20 de novembro, honra a luta, resistência e força do povo negro no Brasil. É um momento para refletir sobre a história, reconhecer injustiças e reforçar a importância do combate ao racismo. <br><br>
+    Ser antirracista é agir, educar, respeitar e lutar todos os dias por um país mais justo, igualitário e humano. A diversidade é a força da nossa nação — e valorizá-la é construir um futuro melhor para todos. <br><br>
+    <p>Aqui são 4 homens negros importantes para a história</p>
+  </div>
+
+  <div class="icons">
+    <div class="icon-item">
+      <img src="martin-luter-king.jpg" alt="Martin Luther King Jr.">
+      <div class="icon-caption">Martin Luther King Jr.</div>
+      <div class="icon-description">
+        Foi um dos maiores líderes da luta pelos direitos civis nos Estados Unidos e uma das vozes mais poderosas contra o racismo no mundo. Defensor da igualdade, da justiça e da paz, acreditava que a transformação social deveria acontecer através da resistência não violenta e do amor ao próximo. Seu discurso mais famoso, "I Have a Dream", continua inspirando gerações ao reafirmar o sonho de um futuro em que todas as pessoas sejam tratadas com dignidade, sem distinção de cor. A trajetória de King é marcada por coragem, esperança e determinação, e seu legado permanece vivo como um chamado para que cada pessoa contribua ativamente para a construção de uma sociedade mais justa e humana.
+      </div>
+    </div>
+
+    <div class="icon-item">
+      <img src="machado-de-assis.jpg" alt="Machado de Assis">
+      <div class="icon-caption">Machado de Assis</div>
+      <div class="icon-description">
+        Foi um dos maiores escritores da literatura brasileira e um dos mais importantes autores da língua portuguesa. Nascido no Rio de Janeiro em 1839, filho de uma lavadeira e de um pintor de paredes, Machado enfrentou desde cedo dificuldades sociais, raciais e econômicas, mas construiu uma trajetória extraordinária baseada em talento, sensibilidade e profunda capacidade de observação humana. Fundador da Academia Brasileira de Letras, escreveu romances, contos, crônicas e poesias que marcaram a cultura do país. Obras como "Dom Casmurro", "Memórias Póstumas de Brás Cubas" e "Quincas Borba" revelam sua escrita crítica, irônica e atemporal, refletindo sobre a sociedade brasileira, suas contradições e injustiças. Seu legado permanece vivo e influencia leitores e escritores até hoje.
+      </div>
+    </div>
+
+    <div class="icon-item">
+      <img src="nelso-mandela.jpg" alt="Nelson Mandela">
+      <div class="icon-caption">Nelson Mandela</div>
+      <div class="icon-description">
+        Foi um líder sul-africano que se tornou símbolo mundial da luta contra o apartheid e pela igualdade racial. Como ativista e posteriormente presidente da África do Sul, Mandela dedicou sua vida à promoção da reconciliação e justiça social. Sua mensagem de perdão e união após 27 anos de prisão inspirou milhões ao redor do mundo. Prêmio Nobel da Paz em 1993, seu legado transcende fronteiras, representando a resistência pacífica e a crença inabalável na dignidade humana, independentemente de raça ou origem.
+      </div>
+    </div>
+
+    <div class="icon-item">
+      <img src="zumbi-dos-palmares.jpg" alt="Zumbi dos Palmares">
+      <div class="icon-caption">Zumbi dos Palmares</div>
+      <div class="icon-description">
+        Foi um dos maiores símbolos da resistência negra à escravidão no Brasil. Líder do Quilombo dos Palmares, o maior e mais duradouro quilombo da história brasileira, Zumbi lutou bravamente pela liberdade de seu povo contra as expedições portuguesas e holandesas. Sua morte em 20 de novembro de 1695 transformou-se em marco simbólico, sendo esta data escolhida para celebrar o Dia da Consciência Negra. Zumbi representa a luta pela liberdade, a resistência cultural e a defesa dos direitos do povo negro, inspirando gerações na busca por igualdade e justiça social.
+      </div>
+    </div>
+  </div>
+  <p>Com amor e carinho termino esse site feito por Alexandre 6a &copy;</p>
+
+</body>
+</html>
